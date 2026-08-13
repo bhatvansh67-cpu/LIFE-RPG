@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#070914"
+    >
+
+    <title>LIFE//RPG — Spatial</title>
+
+    <link
+        rel="icon"
+        href="assets/favicon.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/brutalism.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/themes.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="space-background">
+
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="grid-plane"></div>
+
+    </div>
+
+
+    <!-- APP -->
+
+    <div class="app">
+
+        <!-- HEADER -->
+
+        <header class="glass-header">
+
+            <div class="brand">
+
+                <div class="brand-orb">
+                    ◈
+                </div>
+
+                <div>
+
+                    <strong>
+                        LIFE<span>//</span>RPG
+                    </strong>
+
+                    <small>
+                        SPATIAL LIFE SYSTEM
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="header-balance">
+
+                    <span>🪙</span>
+
+                    <strong id="coins">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="settingsButton"
+                    class="glass-icon-button"
+                >
+                    ⚙
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+
+        <section class="hero-grid">
+
+
+            <!-- CHARACTER -->
+
+            <div
+                class="glass-card character-card"
+                data-tilt
+            >
+
+                <div class="card-glow"></div>
+
+
+                <div class="character-top">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PLAYER PROFILE
+                        </span>
+
+                        <h1 id="playerName">
+                            ADVENTURER
+                        </h1>
+
+                        <p id="playerTitle">
+                            BEGINNER
+                        </p>
+
+                    </div>
+
+
+                    <div class="level-orb">
+
+                        <span>
+                            LVL
+                        </span>
+
+                        <strong id="levelDisplay">
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="avatar-space">
+
+                    <div class="avatar-aura"></div>
+
+                    <div
+                        id="avatarDisplay"
+                        class="avatar-3d"
+                    >
+                        ⚔️
+                    </div>
+
+                    <button
+                        id="changeAvatar"
+                        class="floating-button"
+                    >
+                        CHANGE AVATAR
+                    </button>
+
+                </div>
+
+
+                <!-- XP -->
+
+                <div class="xp-section">
+
+                    <div class="xp-label">
+
+                        <span>
+                            EXPERIENCE
+                        </span>
+
+                        <strong>
+
+                            <span id="currentXP">
+                                0
+                            </span>
+
+                            /
+
+                            <span id="requiredXP">
+                                100
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="xp-track">
+
+                        <div
+                            id="xpProgress"
+                            class="xp-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLAYER META -->
+
+                <div class="player-metrics">
+
+                    <div class="metric">
+
+                        <span>RANK</span>
+
+                        <strong id="rank">
+                            NOVICE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <span>STREAK</span>
+
+                        <strong>
+                            🔥
+                            <b id="streak">0</b>
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <span>QUESTS</span>
+
+                        <strong id="completedQuests">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ECONOMY -->
+
+            <div class="economy-column">
+
+
+                <div
+                    class="glass-card economy-card"
+                    data-tilt
+                >
+
+                    <div class="widget-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                LIFE ECONOMY
+                            </span>
+
+                            <h2>
+                                WALLET
+                            </h2>
+
+                        </div>
+
+                        <span class="widget-icon">
+                            🪙
+                        </span>
+
+                    </div>
+
+
+                    <div class="coin-display">
+
+                        <div class="coin-3d">
+                            🪙
+                        </div>
+
+                        <div>
+
+                            <small>
+                                AVAILABLE
+                            </small>
+
+                            <strong id="walletBalance">
+                                0
+                            </strong>
+
+                            <span>
+                                LIFE COINS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="economy-stats">
+
+                        <div>
+
+                            <span>
+                                STAKED
+                            </span>
+
+                            <strong id="stakedCoins">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                TOTAL EARNED
+                            </span>
+
+                            <strong id="totalXP">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DAILY SCORE -->
+
+                <div
+                    class="glass-card score-card"
+                    data-tilt
+                >
+
+                    <div class="score-ring">
+
+                        <svg viewBox="0 0 120 120">
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="50"
+                                class="score-bg"
+                            ></circle>
+
+                            <circle
+                                id="scoreCircle"
+                                cx="60"
+                                cy="60"
+                                r="50"
+                                class="score-progress"
+                            ></circle>
+
+                        </svg>
+
+                        <div class="score-value">
+
+                            <strong id="productivity">
+                                0%
+                            </strong>
+
+                            <span>
+                                TODAY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="eyebrow">
+                            PERFORMANCE
+                        </span>
+
+                        <h3>
+                            DAILY SCORE
+                        </h3>
+
+                        <p>
+                            Keep completing quests
+                            to increase your score.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats-row">
+
+
+            <div
+                class="glass-card stat-card"
+                data-tilt
+            >
+
+                <span>💪</span>
+
+                <div>
+
+                    <small>
+                        STRENGTH
+                    </small>
+
+                    <strong id="strength">
+                        1
+                    </strong>
+
+                </div>
+
+                <div class="mini-progress">
+                    <i id="strengthBar"></i>
+                </div>
+
+            </div>
+
+
+            <div
+                class="glass-card stat-card"
+                data-tilt
+            >
+
+                <span>🧠</span>
+
+                <div>
+
+                    <small>
+                        INTELLIGENCE
+                    </small>
+
+                    <strong id="intelligence">
+                        1
+                    </strong>
+
+                </div>
+
+                <div class="mini-progress">
+                    <i id="intelligenceBar"></i>
+                </div>
+
+            </div>
+
+
+            <div
+                class="glass-card stat-card"
+                data-tilt
+            >
+
+                <span>❤️</span>
+
+                <div>
+
+                    <small>
+                        VITALITY
+                    </small>
+
+                    <strong id="vitality">
+                        1
+                    </strong>
+
+                </div>
+
+                <div class="mini-progress">
+                    <i id="vitalityBar"></i>
+                </div>
+
+            </div>
+
+
+            <div
+                class="glass-card stat-card"
+                data-tilt
+            >
+
+                <span>🎯</span>
+
+                <div>
+
+                    <small>
+                        DISCIPLINE
+                    </small>
+
+                    <strong id="discipline">
+                        1
+                    </strong>
+
+                </div>
+
+                <div class="mini-progress">
+                    <i id="disciplineBar"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN -->
+
+        <section class="main-grid">
+
+
+            <!-- QUEST BOARD -->
+
+            <div class="quest-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            MISSION CONTROL
+                        </span>
+
+                        <h2>
+                            QUEST BOARD
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="addQuestButton"
+                        class="primary-button"
+                    >
+                        <span>＋</span>
+                        NEW QUEST
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="glass-controls">
+
+                    <div class="search-box">
+
+                        <span>
+                            ⌕
+                        </span>
+
+                        <input
+                            id="questSearch"
+                            type="text"
+                            placeholder="Search missions..."
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="categoryFilter"
+                        class="glass-select"
+                    >
+
+                        <option value="all">
+                            All categories
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Fitness">
+                            Fitness
+                        </option>
+
+                        <option value="Learning">
+                            Learning
+                        </option>
+
+                        <option value="Work">
+                            Work
+                        </option>
+
+                        <option value="Personal">
+                            Personal
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="sortFilter"
+                        class="glass-select"
+                    >
+
+                        <option value="newest">
+                            Newest
+                        </option>
+
+                        <option value="xp-high">
+                            XP: High → Low
+                        </option>
+
+                        <option value="xp-low">
+                            XP: Low → High
+                        </option>
+
+                        <option value="difficulty">
+                            Difficulty
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    id="questList"
+                    class="quest-list"
+                ></div>
+
+            </div>
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+
+                <!-- ACHIEVEMENTS -->
+
+                <div class="glass-card sidebar-card">
+
+                    <div class="widget-heading">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                MILESTONES
+                            </span>
+
+                            <h3>
+                                ACHIEVEMENTS
+                            </h3>
+
+                        </div>
+
+                        <span>
+                            🏆
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="achievementList"
+                        class="achievement-list"
+                    ></div>
+
+                </div>
+
+
+                <!-- SAVINGS -->
+
+                <div class="glass-card savings-card">
+
+                    <span class="eyebrow">
+                        FINANCIAL HABIT
+                    </span>
+
+                    <h3>
+                        QUEST SAVINGS
+                    </h3>
+
+                    <p>
+                        Stake coins on your goals.
+                        Complete the mission to
+                        recover your stake and
+                        earn profit.
+                    </p>
+
+
+                    <div class="savings-visual">
+
+                        <div class="savings-orb">
+                            🏦
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMITTED
+                            </small>
+
+                            <strong id="savingsAmount">
+                                0 🪙
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </div>
+
+
+    <!-- QUEST MODAL -->
+
+    <div
+        id="questModal"
+        class="modal hidden"
+    >
+
+        <div class="glass-modal">
+
+            <div class="modal-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MISSION CREATOR
+                    </span>
+
+                    <h2>
+                        NEW QUEST
+                    </h2>
+
+                </div>
+
+                <button
+                    class="close-button"
+                    data-close="questModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="questForm">
+
+
+                <label>
+                    QUEST NAME
+
+                    <input
+                        id="questTitle"
+                        class="glass-input"
+                        required
+                        placeholder="e.g. Run 5KM"
+                    >
+
+                </label>
+
+
+                <label>
+                    DESCRIPTION
+
+                    <textarea
+                        id="questDescription"
+                        class="glass-input"
+                        rows="3"
+                        placeholder="What needs to be done?"
+                    ></textarea>
+
+                </label>
+
+
+                <div class="form-grid">
+
+
+                    <label>
+                        XP
+
+                        <input
+                            id="questXP"
+                            class="glass-input"
+                            type="number"
+                            min="1"
+                            value="30"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        COIN STAKE
+
+                        <input
+                            id="questStake"
+                            class="glass-input"
+                            type="number"
+                            min="1"
+                            value="10"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <label>
+                        PROFIT
+
+                        <input
+                            id="questProfit"
+                            class="glass-input"
+                            type="number"
+                            min="1"
+                            value="2"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        DIFFICULTY
+
+                        <select
+                            id="questDifficulty"
+                            class="glass-input"
+                        >
+
+                            <option value="easy">
+                                EASY
+                            </option>
+
+                            <option value="medium">
+                                MEDIUM
+                            </option>
+
+                            <option value="hard">
+                                HARD
+                            </option>
+
+                            <option value="epic">
+                                EPIC
+                            </option>
+
+                        </select>
+
+                    </label>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <label>
+                        CATEGORY
+
+                        <select
+                            id="questCategory"
+                            class="glass-input"
+                        >
+
+                            <option>
+                                Health
+                            </option>
+
+                            <option>
+                                Fitness
+                            </option>
+
+                            <option>
+                                Learning
+                            </option>
+
+                            <option>
+                                Work
+                            </option>
+
+                            <option>
+                                Personal
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+                        ATTRIBUTE
+
+                        <select
+                            id="questAttribute"
+                            class="glass-input"
+                        >
+
+                            <option value="strength">
+                                💪 Strength
+                            </option>
+
+                            <option value="intelligence">
+                                🧠 Intelligence
+                            </option>
+
+                            <option value="vitality">
+                                ❤️ Vitality
+                            </option>
+
+                            <option value="discipline">
+                                🎯 Discipline
+                            </option>
+
+                        </select>
+
+                    </label>
+
+                </div>
+
+
+                <div class="stake-warning">
+
+                    <span>
+                        🔐
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            COIN COMMITMENT
+                        </strong>
+
+                        <p>
+                            Your stake is locked
+                            when this quest starts.
+                            Complete it to recover
+                            the stake + profit.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button full"
+                >
+                    CREATE MISSION
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- SETTINGS -->
+
+    <div
+        id="settingsModal"
+        class="modal hidden"
+    >
+
+        <div class="glass-modal">
+
+            <div class="modal-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        SYSTEM
+                    </span>
+
+                    <h2>
+                        SETTINGS
+                    </h2>
+
+                </div>
+
+                <button
+                    class="close-button"
+                    data-close="settingsModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <label>
+                PLAYER NAME
+
+                <input
+                    id="settingsName"
+                    class="glass-input"
+                >
+
+            </label>
+
+
+            <label>
+                PLAYER TITLE
+
+                <input
+                    id="settingsTitle"
+                    class="glass-input"
+                >
+
+            </label>
+
+
+            <label>
+                THEME
+
+                <select
+                    id="themeSelector"
+                    class="glass-input"
+                >
+
+                    <option value="violet">
+                        VIOLET SPACE
+                    </option>
+
+                    <option value="cyan">
+                        CYAN FUTURE
+                    </option>
+
+                    <option value="rose">
+                        ROSE NEBULA
+                    </option>
+
+                    <option value="emerald">
+                        EMERALD CORE
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <button
+                id="saveSettings"
+                class="primary-button full"
+            >
+                SAVE CHANGES
+            </button>
+
+
+            <button
+                id="resetGame"
+                class="danger-button full"
+            >
+                RESET CHARACTER
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEVEL UP -->
+
+    <div
+        id="levelModal"
+        class="modal hidden"
+    >
+
+        <div class="level-modal">
+
+            <div class="level-star">
+                ✦
+            </div>
+
+            <span>
+                LEVEL UP
+            </span>
+
+            <h2>
+                LEVEL
+                <b id="newLevel">
+                    2
+                </b>
+            </h2>
+
+            <p>
+                YOUR CHARACTER HAS EVOLVED.
+            </p>
+
+            <button
+                class="primary-button"
+                data-close="levelModal"
+            >
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/levelSystem.js"></script>
+    <script src="js/quests.js"></script>
+    <script src="js/questManager.js"></script>
+    <script src="js/achievementSystem.js"></script>
+    <script src="js/streakSystem.js"></script>
+    <script src="js/rewardSystem.js"></script>
+    <script src="js/character.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/economy.js"></script>
+    <script src="js/dailyMissions.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</body>
+
+</html>

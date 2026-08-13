@@ -1,0 +1,38 @@
+[data-theme="violet"] {
+
+    --primary:
+        #8b5cf6;
+
+    --secondary:
+        #22d3ee;
+}
+
+
+[data-theme="cyan"] {
+
+    --primary:
+        #06b6d4;
+
+    --secondary:
+        #38bdf8;
+}
+
+
+[data-theme="rose"] {
+
+    --primary:
+        #f43f5e;
+
+    --secondary:
+        #fb7185;
+}
+
+
+[data-theme="emerald"] {
+
+    --primary:
+        #10b981;
+
+    --secondary:
+        #34d399;
+}

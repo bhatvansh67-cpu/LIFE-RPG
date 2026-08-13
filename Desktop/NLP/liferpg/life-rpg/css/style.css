@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+
+    --bg: #070914;
+    --surface: rgba(255,255,255,.075);
+    --surface-strong: rgba(255,255,255,.12);
+
+    --text: #f7f8ff;
+    --muted: #9298ad;
+
+    --primary: #8b5cf6;
+    --secondary: #22d3ee;
+
+    --success: #34d399;
+    --danger: #fb7185;
+    --warning: #fbbf24;
+
+    --border:
+        rgba(255,255,255,.13);
+
+    --glass:
+        rgba(255,255,255,.07);
+
+    --shadow:
+        0 25px 70px rgba(0,0,0,.35);
+
+    --blur:
+        blur(24px);
+
+    --radius:
+        28px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(139,92,246,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(34,211,238,.12),
+            transparent 30%
+        ),
+        var(--bg);
+
+    overflow-x: hidden;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.app {
+
+    width:
+        min(1500px, 94%);
+
+    margin:
+        0 auto;
+
+    padding:
+        24px 0 100px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+h1 {
+    font-size:
+        clamp(38px, 6vw, 74px);
+
+    letter-spacing:
+        -4px;
+
+    line-height:
+        .9;
+}
+
+
+h2 {
+    font-size:
+        clamp(28px, 4vw, 42px);
+
+    letter-spacing:
+        -2px;
+}
+
+
+h3 {
+    font-size:
+        20px;
+}
+
+
+p {
+    color:
+        var(--muted);
+
+    line-height:
+        1.6;
+}
+
+
+.eyebrow {
+
+    display: block;
+
+    color:
+        var(--secondary);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        8px;
+}

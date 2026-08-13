@@ -1,0 +1,69 @@
+/* =========================================
+   MOBILE SPATIAL UI
+========================================= */
+
+@media (max-width: 760px) {
+
+    .economy-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .economy-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .mission-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .mission-reward {
+
+        align-self: flex-start;
+
+    }
+
+
+    .activity-heatmap {
+
+        grid-template-columns:
+            repeat(7, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .economy-stat strong {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .daily-mission-card {
+
+        padding: 17px;
+
+    }
+
+
+    .mission-top h3 {
+
+        font-size: 1.1rem;
+
+    }
+
+}

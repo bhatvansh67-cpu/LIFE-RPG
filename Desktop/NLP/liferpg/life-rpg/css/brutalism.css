@@ -1,0 +1,76 @@
+/* 
+    LEGACY COMPATIBILITY FILE
+
+    LIFE//RPG has moved from
+    Neo-Brutalism to Spatial Glass UI.
+
+    Existing class names are retained
+    where useful so older components
+    don't completely break.
+*/
+
+
+.brutal-card {
+    background:
+        var(--glass);
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    backdrop-filter:
+        var(--blur);
+
+    -webkit-backdrop-filter:
+        var(--blur);
+
+    border-radius:
+        var(--radius);
+}
+
+
+.brutal-button {
+
+    border:
+        1px solid rgba(255,255,255,.2);
+
+    color:
+        white;
+
+    background:
+        rgba(255,255,255,.08);
+
+    padding:
+        12px 18px;
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.2);
+}
+
+
+.brutal-input {
+
+    width: 100%;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:
+        white;
+
+    padding:
+        13px 15px;
+
+    border-radius:
+        14px;
+
+    outline: none;
+}
